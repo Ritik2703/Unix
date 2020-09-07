@@ -11,8 +11,8 @@ Following are the list of various useful unix-commands,
 
 ### Basic file commands
 
-Commands	                           Details
-Basic opeations	 
+        Commands	                           Details
+     Basic opeations	 
  
       ls	                  directory listing
       ls -a	                  show hidden file
@@ -46,17 +46,28 @@ Basic opeations
 
 ### Sort
 
-Commands	                        Details
-Sort	 
-sort filename	        sort the lines of the filename
-sort -u filename	sort and eliminate duplicates
-sort -r filename	reverse order sort
-
-sort file1 -o file2     sort data of file1 and save to file2
-sort file1 > file2
-
-sort -n filename	sort data based on numeric value i.e. 12 > 4
-sort -M fielname	sort data with month name i.e. Jan, Feb, Mar etc.
+      Commands	                        Details
+       Sort	 
+<tr class="row-odd"><td>sort filename</td>
+<td>sort the lines of the filename</td>
+</tr>
+<tr class="row-even"><td>sort -u filename</td>
+<td>sort and eliminate duplicates</td>
+</tr>
+<tr class="row-odd"><td>sort -r filename</td>
+<td>reverse order sort</td>
+</tr>
+<tr class="row-even"><td><p class="first">sort file1 -o file2</p>
+<p class="last">sort file1 &gt; file2</p>
+</td>
+<td>sort data of file1 and save to file2</td>
+</tr>
+<tr class="row-odd"><td>sort -n filename</td>
+<td>sort data based on numeric value i.e. 12 &gt; 4</td>
+</tr>
+<tr class="row-even"><td>sort -M fielname</td>
+<td>sort data with month name i.e. Jan, Feb, Mar etc.</td>
+</tr>
 
 ### Cut
 Commands	Details
