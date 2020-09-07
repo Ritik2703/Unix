@@ -4,6 +4,8 @@
 
 
 # Unix commands - https://unixguide.readthedocs.io/en/latest/unixcheatsheet/index.html
+# Shell Scripting - https://unixguide.readthedocs.io/en/latest/script/index.html
+
 Various useful unix-commands are listed in this chapter. Also, some of the examples of these commands are shown in the last section. Further, in next chapter, shell-scripting is discussed.
 
 ## Unix commands cheatsheet
