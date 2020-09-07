@@ -45,134 +45,18 @@ Following are the list of various useful unix-commands,
                                  chmod [owner, group, others] filename
 
 ### Sort
-
-      Commands	                        Details
-       Sort	 
-<tr class="row-odd"><td>sort filename</td>
-<td>sort the lines of the filename</td>
-</tr>
-<tr class="row-even"><td>sort -u filename</td>
-<td>sort and eliminate duplicates</td>
-</tr>
-<tr class="row-odd"><td>sort -r filename</td>
-<td>reverse order sort</td>
-</tr>
-<tr class="row-even"><td><p class="first">sort file1 -o file2</p>
-<p class="last">sort file1 &gt; file2</p>
-</td>
-<td>sort data of file1 and save to file2</td>
-</tr>
-<tr class="row-odd"><td>sort -n filename</td>
-<td>sort data based on numeric value i.e. 12 &gt; 4</td>
-</tr>
-<tr class="row-even"><td>sort -M fielname</td>
-<td>sort data with month name i.e. Jan, Feb, Mar etc.</td>
-</tr>
-
 ### Cut
-Commands	Details
-Cut	 
-cut d”-” 1,4 filename	cut the 1st and 4th column of filename, where - is delimiter
-cut -c3- filename	remove first 2 character from each line and printed the rest
-cut -c-3-8 filename	print character 3-8 from each line
-cut -c1-3,6-8,10- filename	print character 1-3, skip 4, print 6-8, skip 9, print 10 to end from each line
-cut -d’,’ -f3 filename	extact field-3 from each line with ‘,’ as delimiter
-cut -d’,’ -f3,6 filename	extact field-3-to-6 from each line with ‘,’ as delimiter
-
 ### Paste
-Commands	Details
-Paste	 
-paste file1 file2 file3	paste the lines of file2, then file3 beside the lines of file1
-paste -d’,’ file1 file2	put comma at the end of each file content
-paste -s filename	merge all lines of filename
-
 ### Grep
-Commands	Details
-grep	 
-grep pattern filenames	print the lines with pattern in filenames
-grep ‘[0-9]’ filenames	print the lines from filenames which have numbers 0-9 (regular expression)
-grep -v pattern filenames	print all lines which do not contain pattern
-grep -l pattern filenames	print the filenames which have pattern
-grep -n pattern filenames	print the line numbers as well
-
 ### Sed
-Commands	Details
-sed	 
-sed ‘s/word1/word2/’ filename	replace word1 with word2 in filename
-sed ‘s/word1/word2/’ file1 > file2
-
-mv file2 > file1
-
-use two steps to make change permanent
-sed -n ‘2,4p’ filename	print line 2 to 4 of filename
-sed -n /word1/p’ filename	print lines which contain word1 in filename
 
 ## Multiple commands
 
 ### Pipes
 Pipes are used for sending output of one command to next command.
 
-# total number of files in the directory
-$ ls | wc -l
-1
-
-# word counts for file testfile.txt
-$ cat testfile.txt | wc
-      8      37     188
 ### Run individual commands (;)
 Commands can be run separately from one line by separating them using semicolon,
-
-$ date; ls
-Thu Feb 23 15:24:09 NZDT 2017
-testfile.txt
-
-## Examples
-
-### File examples
-$ ls
-$ touch testfile.txt # create testfile.txt
-$ ls
-testfile.txt
-
-$ cat testfile.txt
-
-$ cal > testfile.txt  # write the calender to testfile.txt
-$ cat testfile.txt
-   February 2017
-Su Mo Tu We Th Fr Sa
-          1  2  3  4
- 5  6  7  8  9 10 11
-12 13 14 15 16 17 18
-19 20 21 22 23 24 25
-26 27 28
-
-$ date >> testfile.txt  # append date at the end of testfile.txt
-$ cat testfile.txt
-   February 2017
-Su Mo Tu We Th Fr Sa
-          1  2  3  4
- 5  6  7  8  9 10 11
-12 13 14 15 16 17 18
-19 20 21 22 23 24 25
-26 27 28
-
-Thu Feb 23 14:47:51 NZDT 2017
-
-$ date > testfile.txt  # replace all the content of testfile with date
-$ cat testfile.txt
-Thu Feb 23 14:48:09 NZDT 2017
-
-$ cal > testfile.txt  # write calender to file
-$ wc testfile.txt     # count lines, word and character in testfile.txt
-   8  37 188 testfile.txt
-
-# other options for wc
-$ wc -l testfile.txt  # lines
-8 testfile.txt
-$ wc -w testfile.txt  # words
-37 testfile.txt
-$ wc -c testfile.txt  # characters
-188 testfile.txt
 
 ## Sort example
 # create a file
